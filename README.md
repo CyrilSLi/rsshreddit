@@ -16,7 +16,15 @@ python main.py > /dev/null 2>&1 & disown
 
 This starts a server on `localhost:12866`. The process name is `rsshreddit` if you want to kill it later.
 
-Access the feeds using the same structure as before, e.g. `http://localhost:12866/r/AskReddit/.rss`
+Access the feeds using the same URL structure as before, e.g. `http://localhost:12866/r/AskReddit/.rss`
+
+You can add this alias to your shell configuration file to start the server with a single command (replace the placeholders with your local paths):
+
+```bash
+alias rsshreddit='(source <virtualenv_path>/bin/activate; cd <path_to_rsshreddit>/rsshreddit; python main.py > /dev/null 2>&1 & disown)'
+```
+
+**Note:** Always start the server from the same directory as the `main.py` file.
 
 ## Troubleshooting
 
