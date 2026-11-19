@@ -1,0 +1,7 @@
+domonic
+feedgen
+flask
+lxml
+python-dotenv
+seleniumbase
+setproctitle
