@@ -88,6 +88,8 @@ def generate_rss(subreddit):
                 "media_thumbnail": media.getAttribute("src")
             })
             content["content"] += media_template.format(**content)
+        elif article.querySelector("a.post-link"):
+            content["media_link"] = article.querySelector("a.post-link").getAttribute("href")
         else:
             content["media_link"] = content["link"] # for footer_template formatting when no media is present
 
