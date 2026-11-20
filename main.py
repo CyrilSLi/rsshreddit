@@ -109,4 +109,4 @@ def generate_rss(subreddit):
     return Response(fg.atom_str(), 200, {"Content-Type": "application/atom+xml"})
 
 if __name__ == "__main__":
-    app.run(port=12866)
+    app.run(port=12866, threaded=False, processes=1)
